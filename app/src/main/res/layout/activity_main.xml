@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+        <ImageView
+            android:id="@+id/top_view_left_iv"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/platform"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="50dp"
+            android:orientation="vertical"
+            android:focusable="false"
+            android:focusableInTouchMode="true">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:drawableStart="@drawable/search"
+        android:background="@drawable/shape"
+        android:paddingRight="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingStart="10dp"
+        android:hint="请输入要搜索地点"
+        android:textSize="20sp"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        />
+
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="55dp"
+        android:layout_height="42dp"
+        android:text="到这去"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/shape_btn"></Button>
+
+</LinearLayout>
+
+            <ListView
+                android:id="@+id/search_list"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:background="#48323131"
+                android:layout_marginStart="20dp"></ListView>
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_gravity="left"
+        android:id="@+id/ll"
+        android:background="#81A1BD"
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="地图模式"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="普通模式"
+                android:textSize="13dp"></Button>
+            <Button
+                android:id="@+id/satellite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="卫星地图"
+                android:textSize="13dp"></Button>
+            <Button
+                android:id="@+id/night"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="夜景地图"
+                android:textSize="13dp"></Button>
+            <Button
+                android:id="@+id/navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="导航地图"
+                android:textSize="13dp"></Button>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出行路线规划"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/route_bus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="公交"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/route_driver"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="驾车"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/route_walk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="步行"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/route_ride"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="骑行"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <TextView
+            android:textColor="#fff"
+            android:id="@+id/route_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
